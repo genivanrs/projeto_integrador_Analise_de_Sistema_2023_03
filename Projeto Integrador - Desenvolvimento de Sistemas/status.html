@@ -1,0 +1,100 @@
+$(if http-header == Access-Control-Allow-Origin)*$(endif)
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+<title>WiFire</title>
+
+<!-- Page styles -->
+<link rel="stylesheet" href="css/material.min.css">
+<link href="https://fw.wifire.me/hotspotfiles/dJgv07GXWVoPuiuPGlI8X1s/css/style.css" rel="stylesheet">
+
+<link href='https://fw.wifire.me/hotspotfiles/dJgv07GXWVoPuiuPGlI8X1s/logo/logo.ico?type=ico' rel='shortcut icon' type='image/x-icon'/>
+
+<meta http-equiv="pragma" content="no-cache" />
+<meta http-equiv="expires" content="-1" />
+  $(if refresh-timeout)
+  <meta http-equiv="refresh" content="$(refresh-timeout-secs)">
+  $(endif)
+
+  <script language="JavaScript">
+    <!--
+    $(
+      if advert - pending == 'yes')
+    var popup = '';
+
+    function focusAdvert() {
+      if (window.focus) popup.focus();
+    }
+
+    function openAdvert() {
+      popup = open('$(link-advert)', 'hotspot_advert', '');
+      setTimeout("focusAdvert()", 1000);
+    }
+    $(endif)
+
+    function openLogout() {
+      if (window.name != 'hotspot_status') return true;
+      open('$(link-logout)', 'hotspot_logout', 'toolbar=0,location=0,directories=0,status=0,menubars=0,resizable=1,width=280,height=250');
+      window.close();
+      return false;
+    }
+
+    function startClock() {
+      $(
+        if advert - pending == 'yes')
+      openAdvert()
+      $(endif)
+
+      window.location = 'https://https://fw.wifire.me/establishments/afterconnect?ignore_redirect_site=1&rbtoken=' + window.btoa('$(server-name)_$(mac)');
+    }
+    -->
+  </script>
+</head>
+
+<body onLoad="startClock()">
+
+  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <div id="top-app" class="mdl-shadow--4dp">
+    </div>
+    <div class="site-content mdl-layout__content">
+      <a name="top"></a>
+      <div class="login-section mdl-typography--text-center">
+        <div class="mdl-grid site-max-width">
+
+          <br />
+          <div id="login-form" class="mdl-cell mdl-cell mdl-cell--4-col mdl-cell--4-offset mdl-cell--6-col-tablet mdl-cell--1-offset-tablet mdl-cell--12-col-phone mdl-shadow--4dp">
+            <br />
+            <img src="https://fw.wifire.me/hotspotfiles/dJgv07GXWVoPuiuPGlI8X1s/img/logo.png" title="WiFire" style="max-width:55%" />
+            <br />
+            <br />
+            <!-- FIM HEADER PADRÂO -->
+            <br>
+            <!-- MDL Progress Bar with Indeterminate Progress -->
+            <div id="p2" class="mdl-progress mdl-js-progress mdl-progress__indeterminate"></div>
+            <h5>Carregando <br> suas informações</h5>
+            <br />
+            Se nada acontecer, ou em caso de falha.<br>Click <a href="">aqui</a> <br />
+            <!-- FOOTER PADRÂO -->
+          </div>
+          <br />
+        </div>
+      </div>
+
+      <footer class="android-footer mdl-mini-footer">
+        <div class="mdl-mini-footer--top-section">
+        </div>
+
+        <div class="mdl-mini-footer--middle-section">
+        </div>
+      </footer>
+    </div>
+  </div>
+  <script src="js/material.min.js"></script>
+</body>
+
+</html>

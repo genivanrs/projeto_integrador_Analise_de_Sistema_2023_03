@@ -1,0 +1,130 @@
+$(if http-header == Access-Control-Allow-Origin)*$(endif)
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+<title>WiFire</title>
+
+<!-- Page styles -->
+<link rel="stylesheet" href="css/material.min.css">
+<link href="https://fw.wifire.me/hotspotfiles/EW1ZrSwHR4oQflPq9gmd4Ec/css/style.css" rel="stylesheet">
+
+<link href='https://fw.wifire.me/hotspotfiles/EW1ZrSwHR4oQflPq9gmd4Ec/logo/logo.ico?type=ico' rel='shortcut icon' type='image/x-icon'/>
+
+<meta http-equiv="pragma" content="no-cache" />
+<meta http-equiv="expires" content="-1" /></head>
+
+<body>
+  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <div id="top-app" class="mdl-shadow--4dp">
+    </div>
+    <div class="site-content mdl-layout__content">
+      <a name="top"></a>
+      <div class="login-section mdl-typography--text-center">
+        <div class="mdl-grid site-max-width">
+
+          <br />
+          <div id="login-form" class="mdl-cell mdl-cell mdl-cell--4-col mdl-cell--4-offset mdl-cell--6-col-tablet mdl-cell--1-offset-tablet mdl-cell--12-col-phone mdl-shadow--4dp">
+            <br />
+            <img src="https://fw.wifire.me/hotspotfiles/EW1ZrSwHR4oQflPq9gmd4Ec/img/logo.png" title="WiFire" style="max-width:55%" />
+            <br />
+            <br />
+            <!-- FIM HEADER PADRÂO -->
+            <br>
+            <!-- MDL Progress Bar with Indeterminate Progress -->
+            <div id="p2" class="mdl-progress mdl-js-progress mdl-progress__indeterminate"></div>
+            <h5 id="message">Conectando</h5>
+            <script language="JavaScript">
+              <!--
+              function gup(name, url) {
+                if (!url) url = location.href;
+                name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+                var regexS = "[\\?&]" + name + "=([^&#]*)";
+                var regex = new RegExp(regexS);
+                var results = regex.exec(url);
+                return results == null ? null : results[1];
+              }
+
+              function makeRequest(url, method, async) {
+
+                if (method == undefined || !method) {
+                  method = 'GET';
+                }
+
+                if (async ==undefined || !async) {
+                  async = false;
+                }
+
+                if (url == undefined) {
+                  console.log('URL Necessária');
+                  return false;
+                }
+
+                if (window.XMLHttpRequest) { // Mozilla, Safari, ...
+                  httpRequest = new XMLHttpRequest();
+                } else if (window.ActiveXObject) { // IE
+                  try {
+                    httpRequest = new ActiveXObject("Msxml2.XMLHTTP");
+                  } catch (e) {
+                    try {
+                      httpRequest = new ActiveXObject("Microsoft.XMLHTTP");
+                    } catch (e) {}
+                  }
+                }
+
+                if (!httpRequest) {
+                  console.log('Giving up :( Cannot create an XMLHTTP instance');
+                  return false;
+                }
+                httpRequest.open(method, url, async);
+                httpRequest.send();
+              }
+
+              var message = gup('message', document.location.href);
+              if (message) {
+                document.getElementById("message").innerHTML = message;
+              }
+
+              var trial = gup('tuser', document.location.href);
+              if (trial) {
+                //document.location = '/login?username=' + trial;
+                makeRequest('/login?username=' + trial, null, true);
+              }
+
+              var logout = gup('logout', document.location.href);
+              if (logout) {
+                makeRequest('/logout', null, true);
+              }
+
+              var dst = gup('dst', document.location.href);
+              if (dst) {
+                console.log('dst', dst);
+                console.log('descoded dst', decodeURIComponent(dst));
+                location.href = decodeURIComponent(dst);
+              }
+              //
+              -->
+            </script>
+            <!-- FOOTER PADRÂO -->
+          </div>
+          <br />
+        </div>
+      </div>
+
+      <footer class="android-footer mdl-mini-footer">
+        <div class="mdl-mini-footer--top-section">
+        </div>
+
+        <div class="mdl-mini-footer--middle-section">
+        </div>
+      </footer>
+    </div>
+  </div>
+  <script src="js/material.min.js"></script>
+</body>
+
+</html>

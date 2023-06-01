@@ -1,0 +1,59 @@
+body{
+  background-color: #e6e6e6;
+  color: #424242;
+}
+
+table{
+  border:none;
+}
+
+h5{
+  line-height: 1.5 !important;
+}
+#top-app{
+  background-color: #F39318;
+  height: 200px;
+  margin-bottom: -150px;
+  display: block;
+}
+.img-responsive {
+    max-width: 100%;
+    margin: 0 auto;
+}
+.logo-image{
+  height: 30px;
+}
+.site-max-width{
+  max-width: 1280px;
+  margin: auto;
+}
+
+#login-form{
+  padding: 25px;
+  background-color: #fff
+}
+
+.mdl-mini-footer{
+  margin-top: -50px;
+  padding-top: 55px;
+}
+
+.trademark a{ 
+  text-decoration: none;
+  color:#424242;
+}
+footer{
+  background-color: transparent !important;
+}
+
+.mdl-progress.mdl-progress--indeterminate>.bar1, .mdl-progress.mdl-progress__indeterminate>.bar1, .mdl-progress.mdl-progress--indeterminate>.bar3, .mdl-progress.mdl-progress__indeterminate>.bar3 {
+    background-color: #F39318 !important;
+}
+
+.mdl-progress>.bufferbar {
+  background-image: linear-gradient(to right,rgba(255,255,255,.7),rgba(255,255,255,.7)),linear-gradient(to right,#F39318,#F39318);
+}
+
+a{
+  color: #F39318;
+}

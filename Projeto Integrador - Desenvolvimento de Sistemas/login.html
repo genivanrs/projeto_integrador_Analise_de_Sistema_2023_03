@@ -1,0 +1,98 @@
+$(if http-header == Access-Control-Allow-Origin)*$(endif)
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+<title>WiFire</title>
+
+<!-- Page styles -->
+<link rel="stylesheet" href="css/material.min.css">
+<link href="https://fw.wifire.me/hotspotfiles/va5fm5izze9bBf1YgdYyASQ/css/style.css" rel="stylesheet">
+
+<link href='https://fw.wifire.me/hotspotfiles/va5fm5izze9bBf1YgdYyASQ/logo/logo.ico?type=ico' rel='shortcut icon' type='image/x-icon'/>
+
+<meta http-equiv="pragma" content="no-cache" />
+<meta http-equiv="expires" content="-1" />
+  <script language="JavaScript">
+    <!--
+    function startClock() {
+      document.redirect.submit();
+    }
+    -->
+  </script>
+</head>
+
+<body onLoad="startClock()">
+
+  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <div id="top-app" class="mdl-shadow--4dp">
+    </div>
+    <div class="site-content mdl-layout__content">
+      <a name="top"></a>
+      <div class="login-section mdl-typography--text-center">
+        <div class="mdl-grid site-max-width">
+
+          <br />
+          <div id="login-form" class="mdl-cell mdl-cell mdl-cell--4-col mdl-cell--4-offset mdl-cell--6-col-tablet mdl-cell--1-offset-tablet mdl-cell--12-col-phone mdl-shadow--4dp">
+            <br />
+            <img src="https://fw.wifire.me/hotspotfiles/va5fm5izze9bBf1YgdYyASQ/img/logo.png" title="WiFire" style="max-width:55%" />
+            <br />
+            <br />
+            <!-- FIM HEADER PADRÂO -->
+
+            <br />
+            <!-- MDL Progress Bar with Indeterminate Progress -->
+            <div id="p2" class="mdl-progress mdl-js-progress mdl-progress__indeterminate"></div>
+
+            <h5>Conectando</h5>
+            <br />
+            <form name="redirect" action="https://fw.wifire.me" method="post">
+              <input type="hidden" name="mac" value="$(mac)">
+              <input type="hidden" name="ip" value="$(ip)">
+              <input type="hidden" name="username" value="$(username)">
+              <input type="hidden" name="link-login" value="$(link-login)">
+              <input type="hidden" name="link-orig" value="$(link-orig)">
+              <input type="hidden" name="error" value="$(error)">
+              <input type="hidden" name="chap-id" value="$(chap-id)">
+              <input type="hidden" name="chap-challenge" value="$(chap-challenge)">
+              <input type="hidden" name="link-login-only" value="$(link-login-only)">
+              <input type="hidden" name="link-orig-esc" value="$(link-orig-esc)">
+              <input type="hidden" name="mac-esc" value="$(mac-esc)">
+              <input type="hidden" name="server-address" value="$(server-address)">
+              <input type="hidden" name="hostname" value="$(hostname)">
+              <input type="hidden" name="server-name" value="$(server-name)">
+
+              $(if chap-id)
+              <noscript>
+                <center><button type="submit"><b>Clique aqui para continuar</b></button></center>
+              </noscript>
+              $(endif)
+            </form>
+
+            $(if error)
+            <div id="login-error-message"> $(error) </div>
+            $(endif)
+
+            <br>
+            Se nada acontecer, ou em caso de falha.<br>Click <a href="javascript:" onclick="startClock()">aqui</a> <br />
+            <!-- FOOTER PADRÂO -->
+          </div>
+          <br />
+        </div>
+      </div>
+
+      <footer class="android-footer mdl-mini-footer">
+        <div class="mdl-mini-footer--top-section">
+        </div>
+      </footer>
+    </div>
+  </div>
+  <script src="js/material.min.js"></script>
+</body>
+
+</html>

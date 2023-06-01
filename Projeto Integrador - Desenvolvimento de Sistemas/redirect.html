@@ -1,0 +1,72 @@
+$(if http-status == 302)Hotspot redirect$(endif)
+$(if http-header == "Location")$(link-redirect)$(endif)
+<!doctype html>
+
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+<title>WiFire</title>
+
+<!-- Page styles -->
+<link rel="stylesheet" href="css/material.min.css">
+<link href="https://fw.wifire.me/hotspotfiles/AEdiHkqG1Dodc6M_aw1t9tg/css/style.css" rel="stylesheet">
+
+<link href='https://fw.wifire.me/hotspotfiles/AEdiHkqG1Dodc6M_aw1t9tg/logo/logo.ico?type=ico' rel='shortcut icon' type='image/x-icon'/>
+
+<meta http-equiv="pragma" content="no-cache" />
+<meta http-equiv="expires" content="-1" />  <script language="JavaScript">
+    <!--
+    function startClock() {
+      location.href = '$(link-redirect)';
+    }
+    //
+    -->
+  </script>
+</head>
+
+<body onLoad="startClock()">
+
+  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <div id="top-app" class="mdl-shadow--4dp">
+    </div>
+    <div class="site-content mdl-layout__content">
+      <a name="top"></a>
+      <div class="login-section mdl-typography--text-center">
+        <div class="mdl-grid site-max-width">
+
+          <br />
+          <div id="login-form" class="mdl-cell mdl-cell mdl-cell--4-col mdl-cell--4-offset mdl-cell--6-col-tablet mdl-cell--1-offset-tablet mdl-cell--12-col-phone mdl-shadow--4dp">
+            <br />
+            <img src="https://fw.wifire.me/hotspotfiles/AEdiHkqG1Dodc6M_aw1t9tg/img/logo.png" title="WiFire" style="max-width:55%" />
+            <br />
+            <br />
+            <!-- FIM HEADER PADRÂO -->
+            <br />
+            <!-- MDL Progress Bar with Indeterminate Progress -->
+            <div id="p2" class="mdl-progress mdl-js-progress mdl-progress__indeterminate"></div>
+
+            <h5>Redirecionando</h5>
+            <br>
+            Se nada acontecer, ou em caso de falha.<br>Click <a href="$(link-redirect)">aqui</a> <br />
+            <!-- FOOTER PADRÂO -->
+          </div>
+          <br />
+        </div>
+      </div>
+
+      <footer class="android-footer mdl-mini-footer">
+        <div class="mdl-mini-footer--top-section">
+        </div>
+
+        <div class="mdl-mini-footer--middle-section">
+        </div>
+      </footer>
+    </div>
+  </div>
+  <script src="js/material.min.js"></script>
+</body>
+
+</html>
